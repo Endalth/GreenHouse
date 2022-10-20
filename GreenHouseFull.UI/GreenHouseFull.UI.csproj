@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A520FE6E-A529-4F13-9774-087198EE3A10}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GreenHouseFull.UI</RootNamespace>
+    <AssemblyName>GreenHouseFull.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.5.0.4\lib\net46\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\FrmKategoriAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmKategoriAdmin.Designer.cs">
+      <DependentUpon>FrmKategoriAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmKullaniciAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmKullaniciAdmin.Designer.cs">
+      <DependentUpon>FrmKullaniciAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmKullaniciFavoriAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmKullaniciFavoriAdmin.Designer.cs">
+      <DependentUpon>FrmKullaniciFavoriAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmKullaniciFavoriUrunAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmKullaniciFavoriUrunAdmin.Designer.cs">
+      <DependentUpon>FrmKullaniciFavoriUrunAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmKullaniciGecmisAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmKullaniciGecmisAdmin.Designer.cs">
+      <DependentUpon>FrmKullaniciGecmisAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmKullaniciKaraListeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmKullaniciKaraListeAdmin.Designer.cs">
+      <DependentUpon>FrmKullaniciKaraListeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmUrunAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmUrunAdmin.Designer.cs">
+      <DependentUpon>FrmUrunAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmUrunDuzeltmeTalepAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmUrunDuzeltmeTalepAdmin.Designer.cs">
+      <DependentUpon>FrmUrunDuzeltmeTalepAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmUrunIcerikAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmUrunIcerikAdmin.Designer.cs">
+      <DependentUpon>FrmUrunIcerikAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientVariables.cs" />
+    <Compile Include="Dialog Forms\FrmGetNewEmailDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\FrmGetNewEmailDialog.Designer.cs">
+      <DependentUpon>FrmGetNewEmailDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\FrmGetNewPasswordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\FrmGetNewPasswordDialog.Designer.cs">
+      <DependentUpon>FrmGetNewPasswordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\FrmSelectListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\FrmSelectListDialog.Designer.cs">
+      <DependentUpon>FrmSelectListDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\FrmUrunOnayGuncelleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\FrmUrunOnayGuncelleDialog.Designer.cs">
+      <DependentUpon>FrmUrunOnayGuncelleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBigImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBigImage.Designer.cs">
+      <DependentUpon>FrmBigImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFavoriList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFavoriList.Designer.cs">
+      <DependentUpon>FrmFavoriList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGecmisAramalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGecmisAramalar.Designer.cs">
+      <DependentUpon>FrmGecmisAramalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIcerik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIcerik.Designer.cs">
+      <DependentUpon>FrmIcerik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKaraListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKaraListe.Designer.cs">
+      <DependentUpon>FrmKaraListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKayit.Designer.cs">
+      <DependentUpon>FrmKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKullaniciUrunList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKullaniciUrunList.Designer.cs">
+      <DependentUpon>FrmKullaniciUrunList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMainAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainAdmin.Designer.cs">
+      <DependentUpon>FrmMainAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMainUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainUser.Designer.cs">
+      <DependentUpon>FrmMainUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProfil.Designer.cs">
+      <DependentUpon>FrmProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmUreticiAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmUreticiAdmin.Designer.cs">
+      <DependentUpon>FrmUreticiAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmUrunOnayAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmUrunOnayAdmin.Designer.cs">
+      <DependentUpon>FrmUrunOnayAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporUI\FrmRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporUI\FrmRapor.Designer.cs">
+      <DependentUpon>FrmRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrun.Designer.cs">
+      <DependentUpon>FrmUrun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrunAraListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrunAraListe.Designer.cs">
+      <DependentUpon>FrmUrunAraListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrunAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrunAra.Designer.cs">
+      <DependentUpon>FrmUrunAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrunDuzeltmeTalepAc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrunDuzeltmeTalepAc.Designer.cs">
+      <DependentUpon>FrmUrunDuzeltmeTalepAc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrunEkle.Designer.cs">
+      <DependentUpon>FrmUrunEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dialog Forms\FrmGetValueDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\FrmGetValueDialog.Designer.cs">
+      <DependentUpon>FrmGetValueDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporUI\FrmSimpleDataGridRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporUI\FrmSimpleDataGridRapor.Designer.cs">
+      <DependentUpon>FrmSimpleDataGridRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporUI\FrmSimpleListViewRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporUI\FrmSimpleListViewRapor.Designer.cs">
+      <DependentUpon>FrmSimpleListViewRapor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\FrmKategoriAdmin.resx">
+      <DependentUpon>FrmKategoriAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmKullaniciAdmin.resx">
+      <DependentUpon>FrmKullaniciAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmKullaniciFavoriAdmin.resx">
+      <DependentUpon>FrmKullaniciFavoriAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmKullaniciFavoriUrunAdmin.resx">
+      <DependentUpon>FrmKullaniciFavoriUrunAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmKullaniciGecmisAdmin.resx">
+      <DependentUpon>FrmKullaniciGecmisAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmKullaniciKaraListeAdmin.resx">
+      <DependentUpon>FrmKullaniciKaraListeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmUreticiAdmin.resx">
+      <DependentUpon>FrmUreticiAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmUrunAdmin.resx">
+      <DependentUpon>FrmUrunAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmUrunDuzeltmeTalepAdmin.resx">
+      <DependentUpon>FrmUrunDuzeltmeTalepAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmUrunIcerikAdmin.resx">
+      <DependentUpon>FrmUrunIcerikAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\FrmGetNewEmailDialog.resx">
+      <DependentUpon>FrmGetNewEmailDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\FrmGetNewPasswordDialog.resx">
+      <DependentUpon>FrmGetNewPasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\FrmSelectListDialog.resx">
+      <DependentUpon>FrmSelectListDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\FrmUrunOnayGuncelleDialog.resx">
+      <DependentUpon>FrmUrunOnayGuncelleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBigImage.resx">
+      <DependentUpon>FrmBigImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFavoriList.resx">
+      <DependentUpon>FrmFavoriList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGecmisAramalar.resx">
+      <DependentUpon>FrmGecmisAramalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIcerik.resx">
+      <DependentUpon>FrmIcerik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKaraListe.resx">
+      <DependentUpon>FrmKaraListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKayit.resx">
+      <DependentUpon>FrmKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKullaniciUrunList.resx">
+      <DependentUpon>FrmKullaniciUrunList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainAdmin.resx">
+      <DependentUpon>FrmMainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainUser.resx">
+      <DependentUpon>FrmMainUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProfil.resx">
+      <DependentUpon>FrmProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrunDuzeltmeTalepAc.resx">
+      <DependentUpon>FrmUrunDuzeltmeTalepAc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmUrunOnayAdmin.resx">
+      <DependentUpon>FrmUrunOnayAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporUI\FrmRapor.resx">
+      <DependentUpon>FrmRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrun.resx">
+      <DependentUpon>FrmUrun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrunAraListe.resx">
+      <DependentUpon>FrmUrunAraListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrunAra.resx">
+      <DependentUpon>FrmUrunAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrunEkle.resx">
+      <DependentUpon>FrmUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dialog Forms\FrmGetValueDialog.resx">
+      <DependentUpon>FrmGetValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporUI\FrmSimpleDataGridRapor.resx">
+      <DependentUpon>FrmSimpleDataGridRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporUI\FrmSimpleListViewRapor.resx">
+      <DependentUpon>FrmSimpleListViewRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GreenHouseFull.Common\GreenHouseFull.Common.csproj">
+      <Project>{7861B29E-7674-40C4-856E-3BB62DEA2D99}</Project>
+      <Name>GreenHouseFull.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreenHouseFull.DAL\GreenHouseFull.DAL.csproj">
+      <Project>{9EA411BD-9AF0-406B-A44D-609CFAE77A4A}</Project>
+      <Name>GreenHouseFull.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreenHouseFull.DTO\GreenHouseFull.DTO.csproj">
+      <Project>{BD17396F-3C11-401E-91D2-776F7F2898EF}</Project>
+      <Name>GreenHouseFull.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreenHouseFull.ExceptionHandling\GreenHouseFull.ExceptionHandling.csproj">
+      <Project>{56549EAF-9775-442A-8B90-009A5CE5E94E}</Project>
+      <Name>GreenHouseFull.ExceptionHandling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreenHouseFull.Log\GreenHouseFull.Log.csproj">
+      <Project>{6135E706-641B-4750-8337-45379A78D19F}</Project>
+      <Name>GreenHouseFull.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreenHouseFull.Validation\GreenHouseFull.Validation.csproj">
+      <Project>{2C400E81-DBE6-4D38-9994-1F6AFB6F1D07}</Project>
+      <Name>GreenHouseFull.Validation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
